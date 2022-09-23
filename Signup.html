@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <!-- ===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+   <link rel="stylesheet" href="Signup.css">
+   <script>
+    let fname = document.getElementById("fname");
+    let email = document.getElementById("email");
+    let phone_no = document.getElementById("phone_no");
+
+const data = { fname, email, phone_no };
+const myjson = JSON.stringify(data);
+console.log(myjson);
+
+function ValidateEmail() {
+  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+    return true;
+  }
+  alert("must enter email address! \n and it should follow the format");
+  //alert("You have entered an invalid email address!")
+  return false;
+}
+   </script>
+</head>
+<body>
+     <!-- Registration Form -->
+     <div class="container">
+        <header>Registration</header>
+
+        <form action="#">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Personal Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Full Name</label>
+                            <input type="text" id="fname" placeholder="Enter your name" required>
+                        </div>
+
+
+                        <div class="input-field">
+                            <label>Email</label>
+                            <input type="text" id="email" placeholder="Enter your email"  required>
+                        </div>
+                        
+                        <div class="input-field">
+                            <label>Password</label>
+                            <input type="password" placeholder="Enter password" required>
+                        </div>
+                        
+                        <div class="input-field">
+                            <label>Date of Birth</label>
+                            <input type="date" placeholder="Enter birth date" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Mobile Number</label>
+                            <input type="number" id="phone_no" placeholder="Enter mobile number"required >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Gender</label>
+                            <select>
+                                <option disabled selected>Select gender</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Others</option>
+                            </select>
+                        </div>
+
+                        
+                    </div>
+                </div>
+                
+                <div class="details address">
+                    <span class="title">Address Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Flat No:</label>
+                            <input type="text" placeholder="Permanent or Temporary" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>City</label>
+                            <select>
+                                <option disabled selected>Select City</option>
+                                <option>select</option>
+                    <option>Adilabad</option> 
+                    <option>Bhadradri</option>
+                    <option>Kothagudem</option>
+                    <option>Hyderabad</option>
+                    <option>Nizamabad</option>
+                    <option>Mahabubabad</option>
+                    <option>Medak</option>
+                    <option>Sangareddy</option>
+                    <option>Siddipet.</option>
+                    <option>Suryapet</option>
+                    <option>Vikarabad.</option>
+                    <option>Wanaparthy</option>
+                    <option>Warangal </option>
+                    <option>Yadadri Bhuvanagiri.</option>
+                    <option>Mancherial</option>
+                    <option>Vikarabad</option>
+                    <option>Khammam</option>
+                    <option>Kamareddy</option>
+                    <option>Mancherial</option>
+                    <option>Nalgonda</option>
+                            </select>
+                    
+                        </div>
+
+                        <div class="input-field">
+                            <label>State</label>
+                            <select>
+                                <option disabled selected>Select State</option>
+                                <option>select</option>
+                                <option>Andhra Pradesh</option> 
+                                <option>Arunachal Pradesh</option>
+                                <option>Assam(Dispur)</option>
+                                <option>Bihar(Patna)</option>
+                                <option>Chhattisgarh(Raipur)</option>
+                                <option>Goa(Panaji)</option>
+                                <option>Gujarat(Gandhinagar)</option>
+                                <option>Haryana</option>
+                                <option>Himachal Pradesh</option>
+                                <option>Jharkhand</option>
+                                <option>Karnataka</option>
+                                <option>Kerala</option>
+                                <option>Madhya Pradesh </option>
+                                <option>Maharashtra</option>
+                                <option>Manipur</option>
+                                <option>Meghalaya</option>
+                                <option>Mizoram</option>
+                                <option>Nagaland</option>
+                                <option>Odisha</option>
+                                <option>Punjab</option>
+                                <option>Rajasthan</option>
+                                <option>Sikkim </option>
+                                <option>Tamil Nadu</option>
+                                <option>Telangana</option>
+                                <option>Tripura</option>
+                                <option>Uttar Pradesh</option>
+                                <option>Uttarakhand</option>
+                                <option>West Bengal</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Country</label>
+                            <select>
+                                <option disabled selected>Select Country</option>
+                                <option>select</option>
+                                <option>Afghanistan</option>
+                                <option>Australia</option>
+                                <option>Armenia</option>
+                                <option>Brazil</option>
+                                <option>Canada</option>
+                                <option>China</option>
+                                <option>India</option>
+                                <option>Russia</option>
+                                <option>United States of America</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Pincode</label>
+                            <input type="number" placeholder="Enter pincode number">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Ward Number</label>
+                            <input type="number" placeholder="Enter ward number">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details personal">
+                    <span class="title">Experience</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Company name:</label>
+                            <input type="text" placeholder="Company name" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Occupation:</label>
+                            <input type="date" placeholder="Occupation" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Years of Experience:</label>
+                            <select>
+                                <option disabled selected>Select</option>
+                                <option>Fresher</option>
+                                <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            </select>
+                        </div>
+
+                        <span class="text-goback">already have account?
+                            <a href="Login.html" class="text signup-link">LOGIN</a>
+    
+                        </span>
+
+                       
+                    <div>
+                        <button class="nextBtn" onclick="ValidateEmail()">
+                            <span class="btnText">Submit</span>
+                        </button>
+                        <span class="text">already have account?
+                            <a href="Login.html" class="text signup-link">LOGIN</a>
+    
+                        </span>
+    
+
+                    </div>
+                    
+                    </div>
+                </div> 
+            </div>
+                </div> 
+            </div>
+        </form>
+    </div>
+  
+    </body>
+    </html>
+
